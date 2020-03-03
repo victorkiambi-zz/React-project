@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/Home/Home';
-import About from './components/About/About'
+import Tv from './components/Tv/Tv'
 import Movies from "./components/Movies/Movies";
-import Navigation from "./components/Navigation/Navigation";
+import Navigation from "./components/Utils/Navigation/Navigation";
 
 
 function App() {
@@ -14,11 +14,11 @@ function App() {
             <div>
                <Navigation/>
                 <Switch>
-                    <Route path="/about">
-                        <About />
-                    </Route>
                     <Route path="/movies">
                         <Movies />
+                    </Route>
+                    <Route path="/tv">
+                        <Tv />
                     </Route>
                     <Route path="/">
                         <Home />
