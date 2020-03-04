@@ -1,15 +1,15 @@
 import React from 'react';
-import {CardDeck, Card, Button, Row, Col, CardColumns, CardGroup} from "react-bootstrap";
+import {Card, Col, CardGroup} from "react-bootstrap";
 
 function MovieCards(props) {
 
-    if (!props.trending) {
+    if (!props.content) {
         return (
             <CardGroup>
-                {props.content.map((item, index) => (
+                {props.data.map((item, index) => (
                     <Col sm={4} md={4} lg={2}>
                         <Card bg="light" key={index}>
-                            <Card.Img variant="top" src={"http://image.tmdb.org/t/p/w300//" + item.poster_path}/>
+                            <Card.Img variant="top" src={"http://image.tmdb.org/t/p/w300//" + item.poster_path} />
                         </Card>
                     </Col>
                 ))}
@@ -19,9 +19,9 @@ function MovieCards(props) {
     else
         return (
             <CardGroup>
-                {props.trending.map((item, index) => (
-                    <Col sm={4} md={4} lg={2}>
-                        <Card bg="light" key={index}>
+                {props.content.map((item, index) => (
+                    <Col key={index} sm={4} md={4} lg={2}>
+                        <Card bg="light" >
                             <Card.Img variant="top" src={"http://image.tmdb.org/t/p/w300//" + item.poster_path}/>
                         </Card>
                     </Col>

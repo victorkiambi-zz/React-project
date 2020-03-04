@@ -1,16 +1,11 @@
 import React from "react";
-import Toast from "react-bootstrap/Toast";
+import MovieCards from "../../../MovieCards/MovieCards";
 
-function Theatres() {
+function Theatres(props) {
 
     return(
-        <Toast>
-            <Toast.Header>
-                <img src="holder.js/20x20?text=%20" className="rounded mr-2" alt="" />
-                <strong className="mr-auto">Theatres</strong>
-            </Toast.Header>
-            <Toast.Body>Hello, world! This is a toast message.</Toast.Body>
-        </Toast>
+        <MovieCards content={props.content}/>
+
     )
 }
 export default Theatres;

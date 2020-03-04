@@ -4,7 +4,7 @@ import MovieCards from "../../../MovieCards/MovieCards";
 function Trending(props) {
 
     return(
-        <MovieCards trending={props.trending}/>
+        <MovieCards content={props.content}/>
     )
 }
 export default Trending;
